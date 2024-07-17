@@ -1,0 +1,36 @@
+step:
+firstly you have to create an virtual envi
+|
+py -m venv .venv
+-->then you have to activate 
+.venv\scripts\activate 
+after this install django 
+pip install django
+-->then you have to create a project
+django-admin startproject mysite(name according to your project)
+then you have to start server
+python manage.py runserver
+python manage.py startapp chai (for app create)
+python manage.py migrate  --> used for migration 
+python manage.py createsuperuser
+python manage.py makemigrations chai --> for particular app migration
+
+
+
+
+Add tailwind in django
+1. pip install django-tailwind
+2. pip install "django-tailwind[reload]"
+3. python manage.py tailwind init
+4. python manage.py tailwind install
+Incase error 
+5. Add this code in your settings.py --> NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+Also add These lines when you installed app and create app in your settings.py
+a. 'tailwind',
+    'theme', write in installed apps
+b.TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = ['127.0.0.1']
+
+Now open Another terminal and go to directory or project,activate your venv
+6. python manage.py tailwind start   --> start the tailwind
+7. python manage.py tailwind build   --> once you start after that you have to run this cmd
